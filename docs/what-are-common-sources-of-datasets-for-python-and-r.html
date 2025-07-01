@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Q&A 3 What are common sources of datasets for Python and R? | eda.knit</title>
+  <meta name="description" content="<p>A free Q&amp;A-style guide for learning core data science skills through
+Exploratory Data Analysis (EDA) and Visualization. Using both R and Python,
+you’ll build a strong foundation by solving practical, real-world questions —
+one step at a time.</p>" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Q&A 3 What are common sources of datasets for Python and R? | eda.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>A free Q&amp;A-style guide for learning core data science skills through
+Exploratory Data Analysis (EDA) and Visualization. Using both R and Python,
+you’ll build a strong foundation by solving practical, real-world questions —
+one step at a time.</p>" />
+  <meta name="github-repo" content="https://github.com/datainsights/cdi-gwas/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Q&A 3 What are common sources of datasets for Python and R? | eda.knit" />
+  
+  <meta name="twitter:description" content="<p>A free Q&amp;A-style guide for learning core data science skills through
+Exploratory Data Analysis (EDA) and Visualization. Using both R and Python,
+you’ll build a strong foundation by solving practical, real-world questions —
+one step at a time.</p>" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html"/>
+<link rel="next" href="how-do-you-save-a-dataset-in-python-and-r.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https:datainsights.github.io/cdi-general-ds/">Data Science Foundations</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>I PREFACE</b></span></li>
+<li class="chapter" data-level="" data-path="welcome-to-the-general-data-science-exploratory-data-analysis-eda-layer.html"><a href="welcome-to-the-general-data-science-exploratory-data-analysis-eda-layer.html"><i class="fa fa-check"></i>Welcome to the General Data Science – Exploratory Data Analysis (EDA) Layer</a>
+<ul>
+<li class="chapter" data-level="" data-path="welcome-to-the-general-data-science-exploratory-data-analysis-eda-layer.html"><a href="welcome-to-the-general-data-science-exploratory-data-analysis-eda-layer.html#what-youll-learn"><i class="fa fa-check"></i>📘 What You’ll Learn</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html"><i class="fa fa-check"></i>Setting Up Your Analysis Environment</a>
+<ul>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#explanation"><i class="fa fa-check"></i>Explanation</a></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#who-this-is-for"><i class="fa fa-check"></i>🔹 Who This Is For</a></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#install-python"><i class="fa fa-check"></i>Install Python</a></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#install-r-and-rstudio"><i class="fa fa-check"></i>Install R and RStudio</a></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#install-vscode-recommended-editor"><i class="fa fa-check"></i>🔹 Install VSCode (Recommended Editor)</a>
+<ul>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#python-extension-by-microsoft"><i class="fa fa-check"></i>✅ Python Extension (by Microsoft)</a></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#r-extension"><i class="fa fa-check"></i>✅ R Extension</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#setup-with-venv-for-python"><i class="fa fa-check"></i>Setup with <code>venv</code> for Python</a></li>
+<li class="chapter" data-level="" data-path="setting-up-your-analysis-environment.html"><a href="setting-up-your-analysis-environment.html#setup-with-renv-for-r"><i class="fa fa-check"></i>Setup with <code>renv</code> for R</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="verifying-your-setup.html"><a href="verifying-your-setup.html"><i class="fa fa-check"></i>Verifying Your Setup</a></li>
+<li class="chapter" data-level="" data-path="how-to-navigate-this-guide.html"><a href="how-to-navigate-this-guide.html"><i class="fa fa-check"></i>How to Navigate This Guide</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-to-navigate-this-guide.html"><a href="how-to-navigate-this-guide.html#tips-for-side-by-side-learning"><i class="fa fa-check"></i>🔁 Tips for Side-by-Side Learning</a></li>
+<li class="chapter" data-level="" data-path="how-to-navigate-this-guide.html"><a href="how-to-navigate-this-guide.html#whats-next"><i class="fa fa-check"></i>✅ What’s Next?</a></li>
+</ul></li>
+<li class="part"><span><b>II DATA EXPLORATION</b></span></li>
+<li class="chapter" data-level="1" data-path="how-do-you-create-a-project-directory-ready-for-analysis.html"><a href="how-do-you-create-a-project-directory-ready-for-analysis.html"><i class="fa fa-check"></i><b>1</b> How do you create a project directory ready for analysis?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="how-do-you-create-a-project-directory-ready-for-analysis.html"><a href="how-do-you-create-a-project-directory-ready-for-analysis.html#explanation-1"><i class="fa fa-check"></i><b>1.1</b> Explanation</a></li>
+<li class="chapter" data-level="1.2" data-path="how-do-you-create-a-project-directory-ready-for-analysis.html"><a href="how-do-you-create-a-project-directory-ready-for-analysis.html#bash-terminal"><i class="fa fa-check"></i><b>1.2</b> Bash (Terminal)</a></li>
+<li class="chapter" data-level="1.3" data-path="how-do-you-create-a-project-directory-ready-for-analysis.html"><a href="how-do-you-create-a-project-directory-ready-for-analysis.html#python-code"><i class="fa fa-check"></i><b>1.3</b> Python Code</a></li>
+<li class="chapter" data-level="1.4" data-path="how-do-you-create-a-project-directory-ready-for-analysis.html"><a href="how-do-you-create-a-project-directory-ready-for-analysis.html#r-code"><i class="fa fa-check"></i><b>1.4</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html"><a href="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html"><i class="fa fa-check"></i><b>2</b> How do you install basic data science tools and libraries for Python and R?</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html"><a href="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html#explanation-2"><i class="fa fa-check"></i><b>2.1</b> Explanation</a></li>
+<li class="chapter" data-level="2.2" data-path="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html"><a href="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html#python-tools"><i class="fa fa-check"></i><b>2.2</b> Python Tools</a></li>
+<li class="chapter" data-level="2.3" data-path="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html"><a href="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html#r-tools"><i class="fa fa-check"></i><b>2.3</b> R Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-are-common-sources-of-datasets-for-python-and-r.html"><a href="what-are-common-sources-of-datasets-for-python-and-r.html"><i class="fa fa-check"></i><b>3</b> What are common sources of datasets for Python and R?</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-are-common-sources-of-datasets-for-python-and-r.html"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#explanation-3"><i class="fa fa-check"></i><b>3.1</b> Explanation</a></li>
+<li class="chapter" data-level="3.2" data-path="what-are-common-sources-of-datasets-for-python-and-r.html"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#python-package-based-datasets"><i class="fa fa-check"></i><b>3.2</b> Python Package-Based Datasets</a></li>
+<li class="chapter" data-level="3.3" data-path="what-are-common-sources-of-datasets-for-python-and-r.html"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#r-package-based-datasets"><i class="fa fa-check"></i><b>3.3</b> R Package-Based Datasets</a></li>
+<li class="chapter" data-level="3.4" data-path="what-are-common-sources-of-datasets-for-python-and-r.html"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#online-public-data-sources"><i class="fa fa-check"></i><b>3.4</b> Online Public Data Sources</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="how-do-you-save-a-dataset-in-python-and-r.html"><a href="how-do-you-save-a-dataset-in-python-and-r.html"><i class="fa fa-check"></i><b>4</b> How do you save a dataset in Python and R?</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="how-do-you-save-a-dataset-in-python-and-r.html"><a href="how-do-you-save-a-dataset-in-python-and-r.html#explanation-4"><i class="fa fa-check"></i><b>4.1</b> Explanation</a></li>
+<li class="chapter" data-level="4.2" data-path="how-do-you-save-a-dataset-in-python-and-r.html"><a href="how-do-you-save-a-dataset-in-python-and-r.html#python-code-1"><i class="fa fa-check"></i><b>4.2</b> Python Code</a></li>
+<li class="chapter" data-level="4.3" data-path="how-do-you-save-a-dataset-in-python-and-r.html"><a href="how-do-you-save-a-dataset-in-python-and-r.html#r-code-1"><i class="fa fa-check"></i><b>4.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html"><i class="fa fa-check"></i><b>5</b> How do you load a pre-cleaned dataset in Python and R?</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html#explanation-5"><i class="fa fa-check"></i><b>5.1</b> Explanation</a></li>
+<li class="chapter" data-level="5.2" data-path="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html#python-code-2"><i class="fa fa-check"></i><b>5.2</b> Python Code</a></li>
+<li class="chapter" data-level="5.3" data-path="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-load-a-pre-cleaned-dataset-in-python-and-r.html#r-code-2"><i class="fa fa-check"></i><b>5.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="how-do-you-rename-column-names-in-python-and-r.html"><a href="how-do-you-rename-column-names-in-python-and-r.html"><i class="fa fa-check"></i><b>6</b> How do you rename column names in Python and R?</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="how-do-you-rename-column-names-in-python-and-r.html"><a href="how-do-you-rename-column-names-in-python-and-r.html#explanation-6"><i class="fa fa-check"></i><b>6.1</b> Explanation</a></li>
+<li class="chapter" data-level="6.2" data-path="how-do-you-rename-column-names-in-python-and-r.html"><a href="how-do-you-rename-column-names-in-python-and-r.html#python-code-3"><i class="fa fa-check"></i><b>6.2</b> Python Code</a></li>
+<li class="chapter" data-level="6.3" data-path="how-do-you-rename-column-names-in-python-and-r.html"><a href="how-do-you-rename-column-names-in-python-and-r.html#r-code-3"><i class="fa fa-check"></i><b>6.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html"><a href="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html"><i class="fa fa-check"></i><b>7</b> How do you examine the structure and types of variables in Python and R?</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html"><a href="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html#explanation-7"><i class="fa fa-check"></i><b>7.1</b> Explanation</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html"><a href="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html#common-data-types-in-python-and-r"><i class="fa fa-check"></i>✅ Common Data Types in Python and R</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html"><a href="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html#python-code-4"><i class="fa fa-check"></i><b>7.2</b> Python Code</a></li>
+<li class="chapter" data-level="7.3" data-path="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html"><a href="how-do-you-examine-the-structure-and-types-of-variables-in-python-and-r.html#r-code-4"><i class="fa fa-check"></i><b>7.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="how-do-you-check-for-missing-values-in-python-and-r.html"><a href="how-do-you-check-for-missing-values-in-python-and-r.html"><i class="fa fa-check"></i><b>8</b> How do you check for missing values in Python and R?</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="how-do-you-check-for-missing-values-in-python-and-r.html"><a href="how-do-you-check-for-missing-values-in-python-and-r.html#explanation-8"><i class="fa fa-check"></i><b>8.1</b> Explanation</a></li>
+<li class="chapter" data-level="8.2" data-path="how-do-you-check-for-missing-values-in-python-and-r.html"><a href="how-do-you-check-for-missing-values-in-python-and-r.html#python-code-5"><i class="fa fa-check"></i><b>8.2</b> Python Code</a></li>
+<li class="chapter" data-level="8.3" data-path="how-do-you-check-for-missing-values-in-python-and-r.html"><a href="how-do-you-check-for-missing-values-in-python-and-r.html#r-code-5"><i class="fa fa-check"></i><b>8.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html"><a href="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html"><i class="fa fa-check"></i><b>9</b> How do you get summary statistics for numeric variables in Python and R?</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html"><a href="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html#explanation-9"><i class="fa fa-check"></i><b>9.1</b> Explanation</a></li>
+<li class="chapter" data-level="9.2" data-path="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html"><a href="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html#python-code-6"><i class="fa fa-check"></i><b>9.2</b> Python Code</a></li>
+<li class="chapter" data-level="9.3" data-path="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html"><a href="how-do-you-get-summary-statistics-for-numeric-variables-in-python-and-r.html#r-code-6"><i class="fa fa-check"></i><b>9.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html"><a href="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html"><i class="fa fa-check"></i><b>10</b> How do you filter rows based on a condition in Python and R?</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html"><a href="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html#explanation-10"><i class="fa fa-check"></i><b>10.1</b> Explanation</a></li>
+<li class="chapter" data-level="10.2" data-path="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html"><a href="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html#python-code-7"><i class="fa fa-check"></i><b>10.2</b> Python Code</a></li>
+<li class="chapter" data-level="10.3" data-path="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html"><a href="how-do-you-filter-rows-based-on-a-condition-in-python-and-r.html#r-code-7"><i class="fa fa-check"></i><b>10.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html"><a href="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html"><i class="fa fa-check"></i><b>11</b> How do you sort rows based on a variable in Python and R?</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html"><a href="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html#explanation-11"><i class="fa fa-check"></i><b>11.1</b> Explanation</a></li>
+<li class="chapter" data-level="11.2" data-path="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html"><a href="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html#python-code-8"><i class="fa fa-check"></i><b>11.2</b> Python Code</a></li>
+<li class="chapter" data-level="11.3" data-path="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html"><a href="how-do-you-sort-rows-based-on-a-variable-in-python-and-r.html#r-code-8"><i class="fa fa-check"></i><b>11.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="how-do-you-create-a-new-variable-in-python-and-r.html"><a href="how-do-you-create-a-new-variable-in-python-and-r.html"><i class="fa fa-check"></i><b>12</b> How do you create a new variable in Python and R?</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="how-do-you-create-a-new-variable-in-python-and-r.html"><a href="how-do-you-create-a-new-variable-in-python-and-r.html#explanation-12"><i class="fa fa-check"></i><b>12.1</b> Explanation</a></li>
+<li class="chapter" data-level="12.2" data-path="how-do-you-create-a-new-variable-in-python-and-r.html"><a href="how-do-you-create-a-new-variable-in-python-and-r.html#python-code-9"><i class="fa fa-check"></i><b>12.2</b> Python Code</a></li>
+<li class="chapter" data-level="12.3" data-path="how-do-you-create-a-new-variable-in-python-and-r.html"><a href="how-do-you-create-a-new-variable-in-python-and-r.html#r-code-9"><i class="fa fa-check"></i><b>12.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html"><a href="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html"><i class="fa fa-check"></i><b>13</b> How do you detect and remove duplicate rows in Python and R?</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html"><a href="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html#explanation-13"><i class="fa fa-check"></i><b>13.1</b> Explanation</a></li>
+<li class="chapter" data-level="13.2" data-path="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html"><a href="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html#python-code-10"><i class="fa fa-check"></i><b>13.2</b> Python Code</a></li>
+<li class="chapter" data-level="13.3" data-path="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html"><a href="how-do-you-detect-and-remove-duplicate-rows-in-python-and-r.html#r-code-10"><i class="fa fa-check"></i><b>13.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="how-do-you-export-a-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-export-a-cleaned-dataset-in-python-and-r.html"><i class="fa fa-check"></i><b>14</b> How do you export a cleaned dataset in Python and R?</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="how-do-you-export-a-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-export-a-cleaned-dataset-in-python-and-r.html#explanation-14"><i class="fa fa-check"></i><b>14.1</b> Explanation</a></li>
+<li class="chapter" data-level="14.2" data-path="how-do-you-export-a-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-export-a-cleaned-dataset-in-python-and-r.html#python-code-11"><i class="fa fa-check"></i><b>14.2</b> Python Code</a></li>
+<li class="chapter" data-level="14.3" data-path="how-do-you-export-a-cleaned-dataset-in-python-and-r.html"><a href="how-do-you-export-a-cleaned-dataset-in-python-and-r.html#r-code-11"><i class="fa fa-check"></i><b>14.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="how-do-you-convert-variable-types-in-python-and-r.html"><a href="how-do-you-convert-variable-types-in-python-and-r.html"><i class="fa fa-check"></i><b>15</b> How do you convert variable types in Python and R?</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="how-do-you-convert-variable-types-in-python-and-r.html"><a href="how-do-you-convert-variable-types-in-python-and-r.html#explanation-15"><i class="fa fa-check"></i><b>15.1</b> Explanation</a></li>
+<li class="chapter" data-level="15.2" data-path="how-do-you-convert-variable-types-in-python-and-r.html"><a href="how-do-you-convert-variable-types-in-python-and-r.html#python-code-12"><i class="fa fa-check"></i><b>15.2</b> Python Code</a></li>
+<li class="chapter" data-level="15.3" data-path="how-do-you-convert-variable-types-in-python-and-r.html"><a href="how-do-you-convert-variable-types-in-python-and-r.html#r-code-12"><i class="fa fa-check"></i><b>15.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="how-do-you-group-and-summarize-data-in-python-and-r.html"><a href="how-do-you-group-and-summarize-data-in-python-and-r.html"><i class="fa fa-check"></i><b>16</b> How do you group and summarize data in Python and R?</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="how-do-you-group-and-summarize-data-in-python-and-r.html"><a href="how-do-you-group-and-summarize-data-in-python-and-r.html#explanation-16"><i class="fa fa-check"></i><b>16.1</b> Explanation</a></li>
+<li class="chapter" data-level="16.2" data-path="how-do-you-group-and-summarize-data-in-python-and-r.html"><a href="how-do-you-group-and-summarize-data-in-python-and-r.html#python-code-13"><i class="fa fa-check"></i><b>16.2</b> Python Code</a></li>
+<li class="chapter" data-level="16.3" data-path="how-do-you-group-and-summarize-data-in-python-and-r.html"><a href="how-do-you-group-and-summarize-data-in-python-and-r.html#r-code-13"><i class="fa fa-check"></i><b>16.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="how-do-you-drop-or-reorder-columns-in-python-and-r.html"><a href="how-do-you-drop-or-reorder-columns-in-python-and-r.html"><i class="fa fa-check"></i><b>17</b> How do you drop or reorder columns in Python and R?</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="how-do-you-drop-or-reorder-columns-in-python-and-r.html"><a href="how-do-you-drop-or-reorder-columns-in-python-and-r.html#explanation-17"><i class="fa fa-check"></i><b>17.1</b> Explanation</a></li>
+<li class="chapter" data-level="17.2" data-path="how-do-you-drop-or-reorder-columns-in-python-and-r.html"><a href="how-do-you-drop-or-reorder-columns-in-python-and-r.html#python-code-14"><i class="fa fa-check"></i><b>17.2</b> Python Code</a></li>
+<li class="chapter" data-level="17.3" data-path="how-do-you-drop-or-reorder-columns-in-python-and-r.html"><a href="how-do-you-drop-or-reorder-columns-in-python-and-r.html#r-code-14"><i class="fa fa-check"></i><b>17.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="how-do-you-subset-specific-columns-in-python-and-r.html"><a href="how-do-you-subset-specific-columns-in-python-and-r.html"><i class="fa fa-check"></i><b>18</b> How do you subset specific columns in Python and R?</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="how-do-you-subset-specific-columns-in-python-and-r.html"><a href="how-do-you-subset-specific-columns-in-python-and-r.html#explanation-18"><i class="fa fa-check"></i><b>18.1</b> Explanation</a></li>
+<li class="chapter" data-level="18.2" data-path="how-do-you-subset-specific-columns-in-python-and-r.html"><a href="how-do-you-subset-specific-columns-in-python-and-r.html#python-code-15"><i class="fa fa-check"></i><b>18.2</b> Python Code</a></li>
+<li class="chapter" data-level="18.3" data-path="how-do-you-subset-specific-columns-in-python-and-r.html"><a href="how-do-you-subset-specific-columns-in-python-and-r.html#r-code-15"><i class="fa fa-check"></i><b>18.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="how-do-you-sample-rows-randomly-in-python-and-r.html"><a href="how-do-you-sample-rows-randomly-in-python-and-r.html"><i class="fa fa-check"></i><b>19</b> How do you sample rows randomly in Python and R?</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="how-do-you-sample-rows-randomly-in-python-and-r.html"><a href="how-do-you-sample-rows-randomly-in-python-and-r.html#explanation-19"><i class="fa fa-check"></i><b>19.1</b> Explanation</a></li>
+<li class="chapter" data-level="19.2" data-path="how-do-you-sample-rows-randomly-in-python-and-r.html"><a href="how-do-you-sample-rows-randomly-in-python-and-r.html#python-code-16"><i class="fa fa-check"></i><b>19.2</b> Python Code</a></li>
+<li class="chapter" data-level="19.3" data-path="how-do-you-sample-rows-randomly-in-python-and-r.html"><a href="how-do-you-sample-rows-randomly-in-python-and-r.html#r-code-16"><i class="fa fa-check"></i><b>19.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html"><a href="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html"><i class="fa fa-check"></i><b>20</b> How do you take a random sample from a large dataset in Python and R?</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html"><a href="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html#explanation-20"><i class="fa fa-check"></i><b>20.1</b> Explanation</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html"><a href="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html#why-switch-to-the-diamonds-dataset"><i class="fa fa-check"></i>🎨 Why Switch to the Diamonds Dataset?</a></li>
+</ul></li>
+<li class="chapter" data-level="20.2" data-path="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html"><a href="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html#python-code-17"><i class="fa fa-check"></i><b>20.2</b> Python Code</a></li>
+<li class="chapter" data-level="20.3" data-path="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html"><a href="how-do-you-take-a-random-sample-from-a-large-dataset-in-python-and-r.html#r-code-17"><i class="fa fa-check"></i><b>20.3</b> R Code</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="eda-summary.html"><a href="eda-summary.html"><i class="fa fa-check"></i>EDA Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="eda-summary.html"><a href="eda-summary.html#what-youve-accomplished"><i class="fa fa-check"></i>🧱 What You’ve Accomplished</a></li>
+<li class="chapter" data-level="" data-path="eda-summary.html"><a href="eda-summary.html#what-comes-after-eda"><i class="fa fa-check"></i>📈 What Comes After EDA?</a></li>
+<li class="chapter" data-level="" data-path="eda-summary.html"><a href="eda-summary.html#continue-learning-with-cdi"><i class="fa fa-check"></i>🚀 Continue Learning with CDI</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://complexdatainsights.com/product">Explore More Guides</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><div class="line-block">General Data Science – Free Edition</div></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="what-are-common-sources-of-datasets-for-python-and-r" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Q&A 3</span> What are common sources of datasets for Python and R?<a href="what-are-common-sources-of-datasets-for-python-and-r.html#what-are-common-sources-of-datasets-for-python-and-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="explanation-3" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Explanation<a href="what-are-common-sources-of-datasets-for-python-and-r.html#explanation-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before working with data, it’s important to know <strong>where data comes from</strong>. In both Python and R, you can use:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Public datasets</strong> from libraries or platforms<br />
+</li>
+<li><strong>Downloaded datasets</strong> from repositories<br />
+</li>
+<li><strong>Real-world data</strong> from research, surveys, APIs, or government sources</li>
+</ol>
+<p>These sources help you practice data skills using real, structured information.</p>
+<p><strong>Common sources include:</strong></p>
+<ul>
+<li><strong>Built-in datasets</strong>:
+<ul>
+<li>Python: <code>seaborn</code>, <code>sklearn.datasets</code>, <code>statsmodels</code>, <code>pydataset</code><br />
+</li>
+<li>R: <code>datasets</code> package, <code>MASS</code>, <code>ggplot2</code>, <code>palmerpenguins</code></li>
+</ul></li>
+<li><strong>Online repositories</strong>:
+<ul>
+<li><a href="https://archive.ics.uci.edu/">UCI Machine Learning Repository</a><br />
+</li>
+<li><a href="https://www.kaggle.com/datasets">Kaggle Datasets</a><br />
+</li>
+<li><a href="https://www.data.gov/">data.gov</a><br />
+</li>
+<li><a href="https://data.worldbank.org/">WHO, UN, World Bank</a></li>
+</ul></li>
+<li><strong>Research &amp; Surveys</strong>:
+<ul>
+<li>CSV/Excel/JSON files published with academic papers or institutions<br />
+</li>
+<li>Survey data from organizations (e.g., Pew Research, Eurostat)</li>
+</ul></li>
+<li><strong>APIs and live feeds</strong>:
+<ul>
+<li>Weather, financial markets, genomics, social media (e.g., Twitter API)</li>
+</ul></li>
+<li><strong>Local files</strong>:
+<ul>
+<li>Saved from tools like Excel, Google Sheets, SPSS, or exported from databases</li>
+</ul></li>
+</ul>
+</div>
+<div id="python-package-based-datasets" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Python Package-Based Datasets<a href="what-are-common-sources-of-datasets-for-python-and-r.html#python-package-based-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Seaborn</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb14-1" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb14-2"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb14-2" tabindex="-1"></a>iris <span class="op">=</span> sns.load_dataset(<span class="st">&quot;iris&quot;</span>)</span>
+<span id="cb14-3"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb14-3" tabindex="-1"></a><span class="bu">print</span>(iris[:<span class="dv">5</span>])</span></code></pre></div>
+<pre><code>   sepal_length  sepal_width  petal_length  petal_width species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa</code></pre>
+<ul>
+<li><strong>Scikit-learn</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb16-1" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> datasets</span>
+<span id="cb16-2"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb16-2" tabindex="-1"></a>irisml <span class="op">=</span> datasets.load_iris()</span>
+<span id="cb16-3"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb16-3" tabindex="-1"></a><span class="bu">print</span>(irisml.data[:<span class="dv">5</span>])</span></code></pre></div>
+<pre><code>[[5.1 3.5 1.4 0.2]
+ [4.9 3.  1.4 0.2]
+ [4.7 3.2 1.3 0.2]
+ [4.6 3.1 1.5 0.2]
+ [5.  3.6 1.4 0.2]]</code></pre>
+<ul>
+<li><strong>Statsmodels</strong>:</li>
+</ul>
+<p>import statsmodels.api as sm
+df = sm.datasets.get_rdataset(“Guerry”, “HistData”).data</p>
+</div>
+<div id="r-package-based-datasets" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> R Package-Based Datasets<a href="what-are-common-sources-of-datasets-for-python-and-r.html#r-package-based-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p><strong>datasets</strong> package:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb18-1" tabindex="-1"></a>iris <span class="ot">&lt;-</span> datasets<span class="sc">::</span>iris</span>
+<span id="cb18-2"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb18-2" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code></pre></div>
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre></li>
+<li><p><strong>ggplot2</strong>:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb20-1" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;diamonds&quot;</span>, <span class="at">package =</span> <span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb20-2"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb20-2" tabindex="-1"></a><span class="fu">head</span>(diamonds)</span></code></pre></div>
+<pre><code>  carat       cut color clarity depth table price    x    y    z
+1  0.23     Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
+2  0.21   Premium     E     SI1  59.8    61   326 3.89 3.84 2.31
+3  0.23      Good     E     VS1  56.9    65   327 4.05 4.07 2.31
+4  0.29   Premium     I     VS2  62.4    58   334 4.20 4.23 2.63
+5  0.31      Good     J     SI2  63.3    58   335 4.34 4.35 2.75
+6  0.24 Very Good     J    VVS2  62.8    57   336 3.94 3.96 2.48</code></pre></li>
+<li><p><strong>palmerpenguins</strong> (if installed):</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb22-1" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb22-2"><a href="what-are-common-sources-of-datasets-for-python-and-r.html#cb22-2" tabindex="-1"></a><span class="fu">head</span>(penguins)</span></code></pre></div>
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7               181        3750
+2 Adelie  Torgersen           39.5          17.4               186        3800
+3 Adelie  Torgersen           40.3          18                 195        3250
+4 Adelie  Torgersen           NA            NA                  NA          NA
+5 Adelie  Torgersen           36.7          19.3               193        3450
+6 Adelie  Torgersen           39.3          20.6               190        3650
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre></li>
+</ul>
+<hr />
+</div>
+<div id="online-public-data-sources" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Online Public Data Sources<a href="what-are-common-sources-of-datasets-for-python-and-r.html#online-public-data-sources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="35%" />
+<col width="64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>UCI Machine Learning Repo</td>
+<td><a href="https://archive.ics.uci.edu/ml/" class="uri">https://archive.ics.uci.edu/ml/</a></td>
+</tr>
+<tr class="even">
+<td>Kaggle Datasets</td>
+<td><a href="https://www.kaggle.com/datasets" class="uri">https://www.kaggle.com/datasets</a></td>
+</tr>
+<tr class="odd">
+<td>data.gov (US Government)</td>
+<td><a href="https://www.data.gov" class="uri">https://www.data.gov</a></td>
+</tr>
+<tr class="even">
+<td>Awesome Public Datasets</td>
+<td><a href="https://github.com/awesomedata/awesome-public-datasets" class="uri">https://github.com/awesomedata/awesome-public-datasets</a></td>
+</tr>
+<tr class="odd">
+<td>World Bank Open Data</td>
+<td><a href="https://data.worldbank.org/" class="uri">https://data.worldbank.org/</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 Tip: Always save downloaded datasets in your <code>data/</code> folder and reference them using relative paths like <code>data/filename.csv</code>.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>✅ Now that you know where to find data, let’s learn how to save, load and preview it in your Python or R environment.</p>
+</blockquote>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="how-do-you-install-basic-data-science-tools-and-libraries-for-python-and-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-do-you-save-a-dataset-in-python-and-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/datainsights/cdi-general-ds/edit/main/01-1-eda.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["eda.pdf", "eda.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  },
+  "number_sections": false
+});
+});
+</script>
+
+</body>
+
+</html>

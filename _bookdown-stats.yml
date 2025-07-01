@@ -1,0 +1,13 @@
+book_filename: "stats"
+before_chapter_script: ["scripts/_setup.R"]
+delete_merged_file: yes
+
+language:
+  ui:
+    chapter_name: "Q&A "
+
+rmd_files:
+  - index.Rmd
+  # - 01-1-eda.Rmd
+  # - 01-2-viz.Rmd
+  - 01-3-stats.Rmd

@@ -1,0 +1,99 @@
+Project Tree for cdi-general-ds
+Generated on Fri May 30 08:14:43 EAT 2025
+
+cdi-general-ds
+├── _bookdown-eda.yml
+├── _bookdown-ml.yml
+├── _bookdown-stats.yml
+├── _bookdown-viz.yml
+├── _output.yml
+├── 02-1-eda.Rmd
+├── 02-2-viz.Rmd
+├── 02-3-stats.Rmd
+├── 02-4-ml.Rmd
+├── docs
+│   ├── 404.html
+│   ├── images
+│   ├── index.html
+│   ├── libs
+│   ├── reference-keys.txt
+│   ├── search_index.json
+│   ├── section-1.html
+│   └── style.css
+├── images
+│   └── cover.png
+├── index-eda-gitbook.Rmd
+├── index-ml-gitbook.Rmd
+├── index-ml-pdf.Rmd
+├── index-stats-gitbook.Rmd
+├── index-stats-pdf.Rmd
+├── index-viz-gitbook.Rmd
+├── index-viz-pdf.Rmd
+├── library
+│   ├── apa.csl
+│   ├── book.bib
+│   ├── packages.bib
+│   └── references.bib
+├── LICENSE
+├── ml-gitbook
+│   ├── 404.html
+│   ├── images
+│   ├── index.html
+│   ├── libs
+│   ├── reference-keys.txt
+│   ├── search_index.json
+│   ├── section-1.html
+│   ├── section-2.html
+│   ├── section-3.html
+│   ├── section-4.html
+│   └── style.css
+├── ml-pdf
+│   └── ml.pdf
+├── preamble.tex
+├── README.md
+├── renv.lock
+├── requirements.txt
+├── scripts
+│   ├── _setup.R
+│   ├── build-all.sh
+│   ├── build-configurable.sh
+│   ├── cdi-install-packages.R
+│   ├── common.R
+│   ├── general.R
+│   ├── init-and-push.sh
+│   ├── setup_py_env.sh
+│   └── setup_r_env.sh
+├── stats-gitbook
+│   ├── 404.html
+│   ├── images
+│   ├── index.html
+│   ├── libs
+│   ├── reference-keys.txt
+│   ├── search_index.json
+│   ├── section-1.html
+│   ├── section-2.html
+│   ├── section-3.html
+│   └── style.css
+├── stats-pdf
+│   └── stats.pdf
+├── style.css
+├── venv
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── pyvenv.cfg
+│   └── share
+├── viz-gitbook
+│   ├── 404.html
+│   ├── images
+│   ├── index.html
+│   ├── libs
+│   ├── reference-keys.txt
+│   ├── search_index.json
+│   ├── section-1.html
+│   ├── section-2.html
+│   └── style.css
+└── viz-pdf
+    └── viz.pdf
+
+24 directories, 70 files
