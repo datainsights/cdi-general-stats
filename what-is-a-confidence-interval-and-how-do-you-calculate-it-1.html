@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | stats.knit</title>
+  <title>Q&A 10 What is a confidence interval and how do you calculate it? | stats.knit</title>
   <meta name="description" content="CDI: Domain Template" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | stats.knit" />
+  <meta property="og:title" content="Q&A 10 What is a confidence interval and how do you calculate it? | stats.knit" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="https://github.com/datainsights/cdi-general-stats/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | stats.knit" />
+  <meta name="twitter:title" content="Q&A 10 What is a confidence interval and how do you calculate it? | stats.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-
+<link rel="prev" href="how-do-you-compute-the-correlation-between-two-variables-1.html"/>
+<link rel="next" href="how-do-you-use-a-chi-squared-test-to-determine-if-two-categorical-variables-are-independent.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,19 +228,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="what-is-a-confidence-interval-and-how-do-you-calculate-it-1" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Q&A 10</span> What is a confidence interval and how do you calculate it?<a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#what-is-a-confidence-interval-and-how-do-you-calculate-it-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="explanation-9" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Explanation<a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#explanation-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A confidence interval provides a range of values that is likely to contain the population parameter. Typically, a 95% confidence interval is used to estimate the mean.
+## Python Code</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb37-2"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-2" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb37-3"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-3" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb37-4"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-4" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-5" tabindex="-1"></a><span class="co"># Load sample data</span></span>
+<span id="cb37-6"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-6" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/iris.csv&quot;</span>)</span>
+<span id="cb37-7"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-7" tabindex="-1"></a>data <span class="op">=</span> df[<span class="st">&quot;sepal_length&quot;</span>]</span>
+<span id="cb37-8"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-8" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-9" tabindex="-1"></a><span class="co"># Compute 95% confidence interval</span></span>
+<span id="cb37-10"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-10" tabindex="-1"></a>mean <span class="op">=</span> np.mean(data)</span>
+<span id="cb37-11"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-11" tabindex="-1"></a>sem <span class="op">=</span> stats.sem(data)</span>
+<span id="cb37-12"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-12" tabindex="-1"></a>conf_int <span class="op">=</span> stats.t.interval(<span class="fl">0.95</span>, <span class="bu">len</span>(data)<span class="op">-</span><span class="dv">1</span>, loc<span class="op">=</span>mean, scale<span class="op">=</span>sem)</span>
+<span id="cb37-13"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-13" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb37-14" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;95% Confidence Interval: </span><span class="sc">{</span>conf_int<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<pre><code>95% Confidence Interval: (np.float64(5.709732481507366), np.float64(5.976934185159301))</code></pre>
+</div>
+<div id="r-code-9" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> R Code<a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#r-code-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb39-2"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-2" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-3" tabindex="-1"></a><span class="co"># Load sample data</span></span>
+<span id="cb39-4"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-4" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/iris.csv&quot;</span>)</span>
+<span id="cb39-5"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-5" tabindex="-1"></a>data <span class="ot">&lt;-</span> df<span class="sc">$</span>sepal_length</span>
+<span id="cb39-6"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-6" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-7" tabindex="-1"></a><span class="co"># 95% confidence interval</span></span>
+<span id="cb39-8"><a href="what-is-a-confidence-interval-and-how-do-you-calculate-it-1.html#cb39-8" tabindex="-1"></a><span class="fu">t.test</span>(data)<span class="sc">$</span>conf.int</span></code></pre></div>
+<pre><code>[1] 5.709732 5.976934
+attr(,&quot;conf.level&quot;)
+[1] 0.95</code></pre>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="how-do-you-compute-the-correlation-between-two-variables-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-do-you-use-a-chi-squared-test-to-determine-if-two-categorical-variables-are-independent.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -271,7 +302,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/datainsights/cdi-general-ds/edit/main/%s",
+    "link": "https://github.com/datainsights/cdi-general-ds/edit/main/01-3-stats.Rmd",
     "text": "Edit"
   },
   "history": {

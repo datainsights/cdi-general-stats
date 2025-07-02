@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | stats.knit</title>
+  <title>Q&A 1 What are summary statistics and how do you compute them? | stats.knit</title>
   <meta name="description" content="CDI: Domain Template" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | stats.knit" />
+  <meta property="og:title" content="Q&A 1 What are summary statistics and how do you compute them? | stats.knit" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="https://github.com/datainsights/cdi-general-stats/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | stats.knit" />
+  <meta name="twitter:title" content="Q&A 1 What are summary statistics and how do you compute them? | stats.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-
+<link rel="prev" href="welcome-to-the-general-data-science-statistical-analysis-stats-layer.html"/>
+<link rel="next" href="how-do-you-test-if-the-mean-of-two-groups-is-significantly-different.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -228,19 +228,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="what-are-summary-statistics-and-how-do-you-compute-them" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Q&A 1</span> What are summary statistics and how do you compute them?<a href="what-are-summary-statistics-and-how-do-you-compute-them.html#what-are-summary-statistics-and-how-do-you-compute-them" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="explanation" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Explanation<a href="what-are-summary-statistics-and-how-do-you-compute-them.html#explanation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Summary statistics provide a quick overview of the distribution and central tendency of a dataset. They include measures like mean, median, mode, standard deviation, min, max, and quantiles.</p>
+</div>
+<div id="python-code" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Python Code<a href="what-are-summary-statistics-and-how-do-you-compute-them.html#python-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-3" tabindex="-1"></a><span class="co"># Load sample data</span></span>
+<span id="cb1-4"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-4" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/iris.csv&quot;</span>)</span>
+<span id="cb1-5"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-6" tabindex="-1"></a><span class="co"># Summary statistics</span></span>
+<span id="cb1-7"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-7" tabindex="-1"></a>summary <span class="op">=</span> df.describe()</span>
+<span id="cb1-8"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb1-8" tabindex="-1"></a><span class="bu">print</span>(summary)</span></code></pre></div>
+<pre><code>       sepal_length  sepal_width  petal_length  petal_width
+count    150.000000   150.000000    150.000000   150.000000
+mean       5.843333     3.057333      3.758000     1.199333
+std        0.828066     0.435866      1.765298     0.762238
+min        4.300000     2.000000      1.000000     0.100000
+25%        5.100000     2.800000      1.600000     0.300000
+50%        5.800000     3.000000      4.350000     1.300000
+75%        6.400000     3.300000      5.100000     1.800000
+max        7.900000     4.400000      6.900000     2.500000</code></pre>
+</div>
+<div id="r-code" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> R Code<a href="what-are-summary-statistics-and-how-do-you-compute-them.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb3-2"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-3"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-4" tabindex="-1"></a><span class="co"># Load sample data</span></span>
+<span id="cb3-5"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;data/iris.csv&quot;</span>)</span>
+<span id="cb3-6"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-7" tabindex="-1"></a><span class="co"># Summary statistics</span></span>
+<span id="cb3-8"><a href="what-are-summary-statistics-and-how-do-you-compute-them.html#cb3-8" tabindex="-1"></a><span class="fu">summary</span>(df)</span></code></pre></div>
+<pre><code>  sepal_length    sepal_width     petal_length    petal_width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+   species         
+ Length:150        
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   </code></pre>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="welcome-to-the-general-data-science-statistical-analysis-stats-layer.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-do-you-test-if-the-mean-of-two-groups-is-significantly-different.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -271,7 +317,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/datainsights/cdi-general-ds/edit/main/%s",
+    "link": "https://github.com/datainsights/cdi-general-ds/edit/main/01-3-stats.Rmd",
     "text": "Edit"
   },
   "history": {
