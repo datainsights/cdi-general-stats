@@ -4,12 +4,8 @@ set -e
 
 # Define the list of Jupyter Notebook filenames (without extension)
 NOTEBOOK_NAMES=(
-    "01-0-setup"
-    "01-1-eda"
-    "01-2-viz"
-    "99-what-next"
     "01-3-stats"
-    "01-4-ml"
+
 )
 
 # Define the output directory (use current folder)
@@ -54,7 +50,7 @@ done
 echo "🚀 Starting full build for all levels..."
 
 # levels=("eda-gitbook" "viz-gitbook" "viz-pdf" "stats-gitbook" "stats-pdf" "ml-gitbook" "ml-pdf")
-levels=("eda-gitbook" "viz-gitbook" "stats-gitbook" "ml-gitbook")
+levels=("stats-gitbook")
 for level in "${levels[@]}"; do
   echo ""
   echo "🔁 Building: $level"

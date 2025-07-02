@@ -8,6 +8,4 @@ language:
 
 rmd_files:
   - index.Rmd
-  # - 01-1-eda.Rmd
-  # - 01-2-viz.Rmd
   - 01-3-stats.Rmd
